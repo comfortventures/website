@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comfort Ventures | Innovation & EU Projects</title>
+  <meta
+    name="description"
+    content="Professional company profile for innovation, digital solutions, and European funding opportunities."
+  />
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --white: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #1d4ed8;
+      --primary-dark: #153eaa;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius: 16px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin: 0 0 12px;
+      color: var(--text);
+    }
+
+    .section-subtitle {
+      max-width: 760px;
+      color: var(--muted);
+      margin: 0 0 40px;
+      font-size: 1rem;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 74px;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.2px;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      background: var(--primary);
+      color: white;
+      padding: 11px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 90px 0 70px;
+      background:
+        linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.9)),
+        radial-gradient(circle at top left, rgba(29,78,216,0.08), transparent 35%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      background: rgba(29, 78, 216, 0.08);
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.15;
+      margin: 0 0 18px;
+      max-width: 700px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 650px;
+      margin: 0 0 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: #cbd5e1;
+      background: #f8fafc;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .stat-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    .stat-card span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .hero-panel {
+      background: var(--white);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .hero-panel h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+    }
+
+    .hero-panel p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .check-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .check-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* Cards */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .about-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-box h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .about-box p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* Team */
+    .team-card h3 {
+      margin-bottom: 6px;
+    }
+
+    .team-card img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      margin: 0 auto 15px;
+
+    }
+
+    .team-card {
+  text-align: center;
+}
+
+.team-card p {
+  max-width: 460px;
+  margin: 0 auto;
+}
+    .role {
+      display: inline-block;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-bottom: 12px;
+    }
+
+    /* Contact */
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .contact-info,
+    .contact-form {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-item {
+      margin-bottom: 14px;
+      color: var(--muted);
+    }
+
+    .contact-item strong {
+      color: var(--text);
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font: inherit;
+      outline: none;
+      background: #fff;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .form-message {
+      margin-top: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      display: none;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .contact-wrap,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 20px 24px;
+        gap: 16px;
+        display: none;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-cta {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .section-title {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#home" class="logo">Your<span>Company</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#focus">Services</a>
+        <a href="#team">Team</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Innovation • Digital Solutions • EU Readiness</span>
+          <h1>
+            Building innovative solutions and strong partnerships for European opportunities
+          </h1>
+          <p>
+            We support the development of forward-looking projects in technology,
+            business innovation, and collaborative European initiatives. Our goal is
+            to create solutions with measurable value and long-term impact.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Get in touch</a>
+            <a href="#team" class="btn btn-secondary">Meet the team</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <strong>3</strong>
+              <span>Core team members</span>
+            </div>
+            <div class="stat-card">
+              <strong>EU</strong>
+              <span>Collaboration mindset</span>
+            </div>
+            <div class="stat-card">
+              <strong>SME</strong>
+              <span>Innovation-oriented approach</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <h3>What we offer</h3>
+          <p>
+            A professional company profile focused on innovation, implementation,
+            and readiness for partnerships in European programs.
+          </p>
+          <ul class="check-list">
+            <li>Digital innovation and technical delivery</li>
+            <li>Project coordination and business development</li>
+            <li>Partnership support for EU proposals</li>
+            <li>Operational structure for scalable growth</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <p class="section-subtitle">
+          Our company combines innovation, practical execution, and business
+          strategy to develop solutions aligned with the European digital and
+          sustainability ecosystem.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-box">
+            <h3>Our Mission</h3>
+            <p>
+              To design and implement impactful solutions that respond to real
+              market needs while contributing to innovation, collaboration, and
+              sustainable growth across Europe.
+            </p>
+          </div>
+
+          <div class="about-box">
+            <h3>Our Vision</h3>
+            <p>
+              To become a trusted partner in European initiatives by combining
+              technical expertise, strong coordination, and a clear strategic
+              direction for growth and innovation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="focus">
+      <div class="container">
+        <h2 class="section-title">Focus Areas</h2>
+        <p class="section-subtitle">
+          We work across key areas that support innovation projects, digital
+          transformation, and participation in collaborative European actions.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Innovation Projects</h3>
+            <p>
+              We help shape and support initiatives with clear objectives,
+              structured implementation, and long-term value creation.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Digital Solutions</h3>
+            <p>
+              We contribute to the design and delivery of practical digital
+              solutions tailored to organizational and market needs.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>EU Collaboration</h3>
+            <p>
+              We aim to deliver reliable solutions,support growth, and create long-term value through strong partnerships.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <section class="section" id="team">
+      <div class="container">
+        <h2 class="section-title">Our Team</h2>
+        <p class="section-subtitle">
+          Our team combines expertise in business, technology, and operations,
+          creating a strong foundation for building practical solutions and
+          supporting sustainable growth.
+        </p>
+
+        <div class="grid-3">
+          <div class="card team-card">
+            <img src="https://scontent.fath4-2.fna.fbcdn.net/v/t39.30808-1/556819842_24691476697127551_1861488689596675855_n.jpg?stp=dst-jpg_s200x200_tt6&amp;_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=e99d92&amp;_nc_ohc=zNDtaVlnEt8Q7kNvwEVO8RQ&amp;_nc_oc=Adq4sUWHptPANChBk-XE6FcDbrixaeqC0raQLunxYeJ561S6lvtHPDRVfe3gd1MaGvo&amp;_nc_zt=24&amp;_nc_ht=scontent.fath4-2.fna&amp;_nc_gid=q8fPolq3M0NhZBrWqsUUbQ&amp;_nc_ss=7a32e&amp;oh=00_Afz2vtsRC919BfaBJsx5S5D7NX5H0qeuuqxnEBf5H42ukg&amp;oe=69C3A166" alt="Chief Scientist">
+
+            <h3>George Agapiou</h3>
+            <span class="role">Chief Scientist</span>
+            <p>
+              Responsible for the overall strategic direction of the company,
+              partnerships, and coordination of innovation initiatives and
+              collaborative opportunities.
+            </p>
+          </div>
+
+          <div class="card team-card">
+            <img src="https://media.licdn.com/dms/image/v2/C4E03AQFdkpWjsGvFRw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1536253958064?e=1775692800&amp;v=beta&amp;t=kJs6JOMDBsWXzD-yM0OQGji7dZTHyRbf3y324hT6YH0" alt="Technical Lead">
+            <h3>Stylianos Agapiou</h3>
+            <span class="role">Technical Lead</span>
+            <p>
+              Oversees technical planning and implementation, with a focus on
+              digital systems, platform development, and practical innovation.
+            </p>
+          </div>
+          <div class="card team-card">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQFWzov1yFdLeA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1668872370958?e=1775692800&amp;v=beta&amp;t=Cgfuetbi0jFzmYc7nha7dk6ye8U0IjZE2F6pMKHk-RA" alt="Business & Operations">
+            <h3>Marinos Agapiou</h3>
+            <span class="role">Business & Operations</span>
+            <p>
+              Supports daily operations, communication, and organizational
+              efficiency, contributing to business development and stakeholder
+              engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">
+          Interested in collaborations, partnerships, or European project
+          opportunities? Get in touch with us.
+        </p>
+
+        <div class="contact-wrap">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-item"><strong>Email:</strong> info@yourcompany.com</div>
+            <div class="contact-item"><strong>Phone:</strong> +30 210 000 0000</div>
+            <div class="contact-item"><strong>Location:</strong> Athens, Greece</div>
+            <div class="contact-item">
+              <strong>Availability:</strong> Open to partnerships, project discussions,
+              and innovation collaborations.
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <div class="form-message" id="formMessage">
+                Thank you. Your message has been recorded.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Your Company. All rights reserved.</p>
+      <p>Innovation, collaboration, and European project readiness.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const contactForm = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+
+    menuToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("show");
+      });
+    });
+
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      formMessage.style.display = "block";
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>

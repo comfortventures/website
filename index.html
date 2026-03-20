@@ -1,64 +1,415 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Εταιρική Ιστοσελίδα</title>
-</head>
-<body>
-  <h2>Εταιρική Ιστοσελίδα</h2>
-  <p><strong>Διακριτός Τίτλος:</strong>  -</p>
-  <p><strong>Επωνυμία Εταιρίας:</strong>  COMFORT VENTURES I.K.E.</p>
-  <p><strong>Διεύθυνση έδρας:</strong> ΚΕΡΑΜΕΙΚΟΥ 2 20007 ΑΡΧΑΙΑ ΚΟΡΙΝΘΟΣ</p>
-  <p><strong>ΑΦΜ:</strong>  802676593</p>
-  <p><strong>ΔΟΥ:</strong>  ΚΟΡΙΝΘΟΥ</p>
-  <p><strong>Aριθμός ΓΕΜΗ:</strong>  180732337000</p>
-  <p><strong>Αρμόδια Υπηρεσία ΓΕΜΗ:</strong>   ΕΠΙΜΕΛΗΤΗΡΙΟ ΚΟΡΙΝΘΙΑΣ</p>
-  <p><strong>Δραστηριότητες – ΚΑΔ:</strong>
-    <ul>
-        <li>41202001 (κύρια δραστηριοτητα)</li>
-        <li>68101300</li>
-        <li>55201106</li>
-        <li>55201000</li>
-      </ul> 
-  <p><strong>Τηλέφωνο/α επικοινωνίας:</strong>  (+30) 6976133250</p>
-  <p><strong>Email:</strong>  minosagap@gmail.com</p>
-  <p><strong>Εταιρικό Κεφάλαιο:</strong>  160000 &euro;</p>
-  <p><strong>Ημερομηνία Σύστασης</strong>  27/11/2024</p>
+<!-- /index.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Comfort Ventures | Company Profile</title>
+    <meta
+      name="description"
+      content="Comfort Ventures — services, team, and contact."
+    />
+    <link rel="canonical" href="https://comfortventures.gr/" />
 
-  <p><strong>Ημερομηνία Λήξης 1ης διαχειριστικής περιόδου:</strong>  31/12/2024</p>
+    <!-- Open Graph (optional) -->
+    <meta property="og:title" content="Comfort Ventures" />
+    <meta property="og:description" content="Services, team, and contact." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comfortventures.gr/" />
+    <meta property="og:image" content="https://comfortventures.gr/assets/og.jpg" />
 
-  <p><strong>Στοιχεία Εταίρων:</strong></p>
-  <ul>
-    <li>
-      <p>Ονοματεπώνυμο: ΣΤΥΛΙΑΝΟΣ ΑΓΑΠΙΟΥ</p>
-      <p></p>Ονομα πατρός: ΓΕΩΡΓΙΟΣ</p>
-      <p>Α.Φ.Μ.: 157657141</p>
-      <p>Διεύθυνση: ΜΑΥΡΟΓΕΝΟΥΣ 2Α ΓΕΡΑΚΑΣ ΑΤΤΙΚΗΣ,</p>
-      <p>Ταχυδρομικός Κώδικας: 15344</p>
-      <p>Κατηρογία Εισφορών: 1.Κεφαλαιακές</p>
-      <p>Ποσοστό Συμμετοχής: 45%</p>
-    </li>
-      <li>
-        <p>Ονοματεπώνυμο: ΓΕΩΡΓΙΟΣ ΑΓΑΠΙΟΥ</p>
-        <p></p>Ονομα πατρός: ΣΤΥΛΙΑΝΟΣ</p>
-        <p>Α.Φ.Μ.: 044782250</p>
-        <p>Διεύθυνση: ΜΑΥΡΟΓΕΝΟΥΣ 2Α ΓΕΡΑΚΑΣ ΑΤΤΙΚΗΣ,</p>
-        <p>Ταχυδρομικός Κώδικας: 15344</p>
-        <p>Κατηρογία Εισφορών: 1.Κεφαλαιακές</p>
-        <p>Ποσοστό Συμμετοχής: 10%</p>
-      </li>
-    </li>
-    <li>ΜΑΡΙΝΟΣ ΑΓΑΠΙΟΥ – όνομα πατρός ΓΕΩΡΓΙΟΣ, Α.Φ.Μ. 163437646</li>
-    <li>
-      <p>Ονοματεπώνυμο: ΜΑΡΙΝΟΣ ΑΓΑΠΙΟΥ</p>
-      <p></p>Ονομα πατρός: ΓΕΩΡΓΙΟΣ</p>
-      <p>Α.Φ.Μ.: 163437646</p>
-      <p>Διεύθυνση: ΜΑΥΡΟΓΕΝΟΥΣ 2Α ΓΕΡΑΚΑΣ ΑΤΤΙΚΗΣ,</p>
-      <p>Ταχυδρομικός Κώδικας: 15344</p>
-      <p>Κατηρογία Εισφορών: 1.Κεφαλαιακές</p>
-      <p>Ποσοστό Συμμετοχής: 45%</p>
-    </li>
-  </ul> 
-   <p><strong>Διαχειριστές:</strong>  Μαρίνος Αγαπίου</p> 
+    <style>
+      :root {
+        --bg: #0b0f14;
+        --panel: rgba(255, 255, 255, 0.06);
+        --panel2: rgba(255, 255, 255, 0.04);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.7);
+        --border: rgba(255, 255, 255, 0.12);
+        --radius: 18px;
+        --max: 1120px;
+        --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      }
 
-</body>
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+        color: var(--text);
+        background:
+          radial-gradient(1100px 700px at 20% 10%, rgba(90, 140, 255, 0.18), transparent 55%),
+          radial-gradient(900px 600px at 80% 25%, rgba(160, 90, 255, 0.12), transparent 55%),
+          radial-gradient(1000px 700px at 50% 85%, rgba(90, 255, 200, 0.10), transparent 55%),
+          var(--bg);
+        line-height: 1.5;
+      }
+      a { color: inherit; text-decoration: none; }
+      .container { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+
+      /* NAV */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(10px);
+        background: rgba(11, 15, 20, 0.65);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px 0;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+      }
+      .logo {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, rgba(90, 140, 255, 1), rgba(160, 90, 255, 1));
+        box-shadow: 0 10px 30px rgba(90, 140, 255, 0.25);
+      }
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+      .nav-links a { color: var(--muted); font-size: 14px; }
+      .nav-links a:hover { color: var(--text); }
+
+      /* BUTTONS */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 16px;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+        font-weight: 700;
+        transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+      }
+      .btn:hover { transform: translateY(-1px); background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.18); }
+      .btn.primary { border: none; background: linear-gradient(135deg, rgba(90, 140, 255, 1), rgba(160, 90, 255, 1)); }
+
+      /* HERO */
+      header.hero { padding: 72px 0 22px; }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 18px;
+        align-items: start;
+      }
+      .kicker {
+        color: var(--muted);
+        font-size: 14px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 10px 0 12px;
+        font-size: clamp(34px, 3.8vw, 56px);
+        line-height: 1.05;
+        letter-spacing: -0.8px;
+      }
+      .lead {
+        margin: 0 0 18px;
+        font-size: 18px;
+        color: var(--muted);
+        max-width: 62ch;
+      }
+      .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+
+      /* TRUST STRIP */
+      .trust {
+        margin-top: 18px;
+        padding: 14px;
+        background: var(--panel2);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+      }
+      .trust-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .trust-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .badge {
+        padding: 8px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(255,255,255,0.04);
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      /* SECTIONS */
+      section { padding: 28px 0; }
+      .section-title {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 14px;
+      }
+      .section-title h2 { margin: 0; font-size: 22px; letter-spacing: -0.2px; }
+      .section-title p { margin: 0; color: var(--muted); }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+      .box { padding: 16px; }
+      .box p { margin: 0; color: var(--muted); }
+
+      .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+      .service h3 { margin: 8px 0 6px; font-size: 16px; }
+      .service p { margin: 0; color: var(--muted); font-size: 14px; }
+
+      /* TEAM */
+      .team-card {
+        padding: 16px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .avatar {
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.06);
+        flex: 0 0 auto;
+      }
+      .team-meta { display: grid; gap: 2px; }
+      .role { color: var(--muted); font-size: 13px; }
+
+      /* CONTACT */
+      .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+      /* FOOTER */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 22px 0 36px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      /* REVEAL */
+      .reveal { opacity: 0; transform: translateY(10px); transition: opacity 360ms ease, transform 360ms ease; }
+      .reveal.on { opacity: 1; transform: translateY(0); }
+
+      @media (max-width: 920px) {
+        .hero-grid { grid-template-columns: 1fr; }
+        .grid-3 { grid-template-columns: 1fr; }
+        .grid-2 { grid-template-columns: 1fr; }
+        .contact-wrap { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="#top" aria-label="Home">
+          <span class="logo" aria-hidden="true"></span>
+          <span>Comfort Ventures</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#services">Services</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
+          <a href="/company-details.html">Company Details</a>
+          <a class="btn primary" href="mailto:info@comfortventures.gr?subject=Inquiry%20-%20Comfort%20Ventures">Email</a>
+        </nav>
+      </div>
+    </div>
+
+    <main id="top" class="container">
+      <header class="hero">
+        <div class="hero-grid">
+          <div class="reveal">
+            <div class="kicker">Company Profile</div>
+            <h1>Reliable execution across development, real estate, and hospitality.</h1>
+            <p class="lead">
+              Replace this one-liner with your exact positioning (who you serve + what outcome you deliver).
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="mailto:info@comfortventures.gr?subject=Inquiry%20-%20Comfort%20Ventures">Contact via email</a>
+              <a class="btn" href="#services">View services</a>
+            </div>
+
+            <div class="trust">
+              <div class="trust-grid">
+                <div class="kicker">Trust & Compliance</div>
+                <div class="trust-row" aria-label="Trust badges">
+                  <span class="badge">Transparent delivery</span>
+                  <span class="badge">Quality-first</span>
+                  <span class="badge">Greece-based</span>
+                  <!-- Optional: add real certifications/logos once you have them -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="card box reveal" aria-label="Quick info">
+            <div class="kicker">Quick info</div>
+            <h3 style="margin: 8px 0 8px; font-size: 16px;">COMFORT VENTURES I.K.E.</h3>
+            <p>
+              Phone: <a href="tel:+306976133250">(+30) 697 613 3250</a><br />
+              Email: <a href="mailto:info@comfortventures.gr">info@comfortventures.gr</a><br />
+              Location: Ancient Corinth, Greece
+            </p>
+            <p style="margin-top: 12px;">
+              <a class="btn" href="/company-details.html">Company details</a>
+            </p>
+          </aside>
+        </div>
+      </header>
+
+      <section id="services">
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Three clear pillars (like Synelixis’ “capabilities” blocks).</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card box service reveal">
+            <div class="kicker">01</div>
+            <h3>Construction & Development</h3>
+            <p>Planning and execution focused on quality, timelines, and transparency.</p>
+          </div>
+
+          <div class="card box service reveal">
+            <div class="kicker">02</div>
+            <h3>Real Estate</h3>
+            <p>Acquisition, management, and value optimization of property assets.</p>
+          </div>
+
+          <div class="card box service reveal">
+            <div class="kicker">03</div>
+            <h3>Hospitality</h3>
+            <p>Short-term rental and hospitality operations with attention to guest experience.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="team">
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>Only publish what you want public (name + role is enough).</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card team-card reveal">
+            <div class="avatar" aria-hidden="true"></div>
+            <div class="team-meta">
+              <strong>Marinos Agapiou</strong>
+              <span class="role">Managing Director</span>
+              <span class="role">Short bio (1 line)</span>
+            </div>
+          </div>
+
+          <div class="card team-card reveal">
+            <div class="avatar" aria-hidden="true"></div>
+            <div class="team-meta">
+              <strong>Team Member</strong>
+              <span class="role">Role / Title</span>
+              <span class="role">Short bio (1 line)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Email us and we’ll respond quickly.</p>
+        </div>
+
+        <div class="contact-wrap">
+          <div class="card box reveal">
+            <div class="kicker">Email</div>
+            <h3 style="margin: 8px 0 8px; font-size: 16px;">Let’s talk</h3>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:info@comfortventures.gr?subject=Inquiry%20-%20Comfort%20Ventures">info@comfortventures.gr</a><br />
+              <strong>Phone:</strong> <a href="tel:+306976133250">(+30) 697 613 3250</a>
+            </p>
+
+            <div class="cta-row" style="margin-top: 14px;">
+              <a
+                class="btn primary"
+                href="mailto:info@comfortventures.gr?subject=Inquiry%20-%20Comfort%20Ventures&body=Hello%20Comfort%20Ventures%2C%0A%0AI'm%20interested%20in%3A%20%5Bwrite%20here%5D%0A%0AName%3A%0APhone%3A%0A"
+              >Open email</a>
+              <a class="btn" href="/company-details.html">Company details</a>
+            </div>
+          </div>
+
+          <div class="card box reveal">
+            <div class="kicker">Office</div>
+            <h3 style="margin: 8px 0 8px; font-size: 16px;">Ancient Corinth</h3>
+            <p>
+              Headquarters: Kerameikou 2, 20007, Ancient Corinth, Greece
+            </p>
+            <p style="margin-top: 12px; color: var(--muted); font-size: 13px;">
+              Optional: add a Google Maps link (still static).
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-row">
+        <div>© <span id="year"></span> Comfort Ventures</div>
+        <div><a href="/company-details.html">Company Details</a></div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          for (const e of entries) {
+            if (e.isIntersecting) e.target.classList.add("on");
+          }
+        },
+        { threshold: 0.12 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    </script>
+  </body>
 </html>
