@@ -1,20 +1,849 @@
 <!DOCTYPE html>
+<!-- English site homepage: GitHub Pages serves this file at / -->
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Comfort Ventures</title>
-    <!-- GitHub Pages serves this file at /. Redirect to the main English home. -->
-    <meta http-equiv="refresh" content="0; url=home.html" />
-    <link rel="canonical" href="https://comfortventures.gr/home.html" />
-    <script>
-      window.location.replace("home.html");
-    </script>
-  </head>
-  <body>
-    <p>
-      <a href="home.html">Continue to Comfort Ventures (English)</a>
-      — <a href="home-gr.html" hreflang="el">Ελληνικά</a>
-    </p>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comfort Ventures | Innovation & Digital Solutions</title>
+  <meta
+    name="description"
+    content="Professional company profile for innovation, digital solutions, and business growth."
+  />
+  <link rel="canonical" href="https://comfortventures.gr/" />
+  <link rel="alternate" hreflang="en" href="https://comfortventures.gr/" />
+  <link rel="alternate" hreflang="el" href="https://comfortventures.gr/home-gr.html" />
+  <link rel="alternate" hreflang="x-default" href="https://comfortventures.gr/" />
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --white: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #1d4ed8;
+      --primary-dark: #153eaa;
+      --border: #e5e7eb;
+      --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+      --radius: 16px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(29, 78, 216, 0.05), transparent 28%),
+        linear-gradient(180deg, #f9fbfe 0%, #f3f7fc 55%, #edf2f8 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin: 0 0 12px;
+      color: var(--text);
+    }
+
+    .section-subtitle {
+      max-width: 760px;
+      color: var(--muted);
+      margin: 0 0 40px;
+      font-size: 1rem;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 74px;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.2px;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: white !important;
+      background: var(--primary);
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .lang-btn:hover {
+      background: var(--primary-dark);
+      color: white !important;
+    }
+
+    .nav-cta {
+      background: var(--primary);
+      color: white;
+      padding: 11px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 90px 0 70px;
+      background:
+        linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.94)),
+        radial-gradient(circle at top left, rgba(29,78,216,0.10), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(59,130,246,0.08), transparent 30%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      background: rgba(29, 78, 216, 0.08);
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.15;
+      margin: 0 0 18px;
+      max-width: 700px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 650px;
+      margin: 0 0 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: #cbd5e1;
+      background: #f8fafc;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    .stat-card span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .hero-panel {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-panel h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+    }
+
+    .hero-panel p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .check-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .check-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* Cards */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .about-box {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+
+    .about-box h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .about-box p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 96px 0 88px;
+  background:
+    linear-gradient(rgba(11, 18, 32, 0.58), rgba(17, 26, 46, 0.64)),
+    url("images/hero-bg.jpg") center/cover no-repeat;
+  color: white;
+}
+
+    /* Team */
+    .team-card {
+      text-align: center;
+    }
+
+    .team-card h3 {
+      margin-bottom: 6px;
+    }
+
+    .team-card img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      margin: 0 auto 15px;
+    }
+
+    .team-card p {
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    .role {
+      display: inline-block;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-bottom: 12px;
+    }
+
+    /* Contact */
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .contact-info,
+    .contact-form {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+
+    .contact-item {
+      margin-bottom: 14px;
+      color: var(--muted);
+    }
+
+    .contact-item strong {
+      color: var(--text);
+    }
+
+    #contact-details .contact-item a {
+      margin-left: 0.35em;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font: inherit;
+      outline: none;
+      background: #fff;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .form-message {
+      margin-top: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      display: none;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(6px);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .contact-wrap,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 20px 24px;
+        gap: 16px;
+        display: none;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-cta {
+        width: 100%;
+        text-align: center;
+      }
+
+      .lang-btn {
+        width: 100%;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .section-title {
+        font-size: 1.7rem;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#home" class="logo">Comfort<span>Ventures</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a class="lang-btn" href="home-gr.html" hreflang="el" lang="el" title="Ελληνικά">GR</a>
+        <a href="#about">About</a>
+        <a href="#focus">Services</a>
+        <a href="#team">Team</a>
+        <a href="company-details.html">Company details</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Innovation • Technology • Business Growth</span>
+          <h1>
+            Technology solutions built for growth, reliability, and impact
+          </h1>
+          <p>
+            We help businesses turn ideas into practical digital solutions
+            through strong technical execution, clear strategy, and trusted
+            collaboration.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Get in touch</a>
+            <a href="#team" class="btn btn-secondary">Meet the team</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <strong>3</strong>
+              <span>Core team members</span>
+            </div>
+            <div class="stat-card">
+              <strong>Tech</strong>
+              <span>Innovation-driven mindset</span>
+            </div>
+            <div class="stat-card">
+              <strong>Growth</strong>
+              <span>Business-focused approach</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <h3 style="color:#2563eb;">What we offer</h3>
+
+          <p style="color:#374151;">
+            A professional company profile focused on innovation, practical
+            implementation, and business growth.
+          </p>
+          <ul class="check-list">
+            <li>Digital innovation and technical delivery</li>
+            <li>Project coordination and business development</li>
+            <li>Strategic partnerships and collaboration</li>
+            <li>Operational structure for scalable growth</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+     <section class="section" id="team">
+      <div class="container">
+        <h2 class="section-title">Our Team</h2>
+        <p class="section-subtitle">
+          Our team combines expertise in business, technology, and operations,
+          creating a strong foundation for building practical solutions and
+          supporting sustainable growth.
+        </p>
+
+        <div class="grid-3">
+          <div class="card team-card">
+            <img src="images/georgephoto.jpeg" alt="Chief Scientist" />
+            <h3>George Agapiou</h3>
+            <span class="role">Chief Scientist</span>
+            <p>
+              Provides scientific direction and contributes to the company’s
+              strategic development, partnerships, and innovation activities.
+            </p>
+          </div>
+
+          <div class="card team-card">
+            <img src="images/SteliosPhoto.jpeg" alt="Technical Lead" />
+            <h3>Stylianos Agapiou</h3>
+            <span class="role">Technical Lead</span>
+            <p>
+              Oversees technical planning and implementation, ensuring reliable,
+              scalable, and effective digital solutions.
+            </p>
+          </div>
+
+          <div class="card team-card">
+            <img src="images/marinosphoto.jpeg" alt="Business &amp; Operations" />
+            <h3>Marinos Agapiou</h3>
+            <span class="role">Business & Operations</span>
+            <p>
+              Supports daily operations, communication, and organizational
+              efficiency, contributing to business development and stakeholder
+              engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" color="#f4f7fffe">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <p class="section-subtitle">
+          Our company combines innovation, practical execution, and business
+          strategy to develop solutions that support digital transformation and
+          sustainable growth.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-box">
+            <h3>Our Mission</h3>
+            <p>
+              To design and implement impactful solutions that respond to real
+              market needs while supporting innovation, collaboration, and
+              long-term business success.
+            </p>
+          </div>
+
+          <div class="about-box">
+            <h3>Our Vision</h3>
+            <p>
+              To become a trusted partner by combining technical expertise,
+              strong coordination, and a clear strategic direction for growth
+              and innovation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="focus">
+      <div class="container">
+        <h2 class="section-title">Focus Areas</h2>
+        <p class="section-subtitle">
+          We work across key areas that support innovation, digital
+          transformation, and business development.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Innovation Projects</h3>
+            <p>
+              We help shape and support initiatives with clear objectives,
+              structured implementation, and long-term value creation.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Digital Solutions</h3>
+            <p>
+              We contribute to the design and delivery of practical digital
+              solutions tailored to organizational and market needs.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Strategic Partnerships</h3>
+            <p>
+              We deliver reliable solutions, support growth, and create
+              long-term value through strong partnerships and collaboration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">
+          Interested in working together or learning more about our services?
+          Get in touch with us.
+        </p>
+
+        <div class="contact-wrap">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div id="contact-details"></div>
+            <noscript>
+              <p class="contact-item">Please use the contact form to reach us.</p>
+            </noscript>
+            <div class="contact-item"><strong>Location:</strong> Kerameikou 2, 20007 Ancient Corinth, Greece</div>
+            <div class="contact-item">
+              <strong>Availability:</strong> Open to partnerships, project discussions,
+              and new opportunities.
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <div class="form-message" id="formMessage">
+                Thank you. Your message has been recorded.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Comfort Ventures. All rights reserved.</p>
+      <p>Innovation, technology, and sustainable business growth.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const contactForm = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+
+    menuToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("show");
+      });
+    });
+
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      formMessage.style.display = "block";
+      contactForm.reset();
+    });
+
+    (function () {
+      const box = document.getElementById("contact-details");
+      if (!box) return;
+
+      const user = "minosagap";
+      const domain = "gmail.com";
+      const phoneParts = ["+30", "697", "613", "3250"];
+
+      const email = `${user}@${domain}`;
+      const phone = phoneParts.join("");
+      const phoneDisplay = `(${phoneParts[0]}) ${phoneParts[1]} ${phoneParts[2]} ${phoneParts[3]}`;
+
+      box.innerHTML = `
+    <p class="contact-item"><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+    <p class="contact-item"><strong>Phone:</strong> <a href="tel:${phone}">${phoneDisplay}</a></p>
+  `;
+    })();
+  </script>
+</body>
 </html>
