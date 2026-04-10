@@ -1,12 +1,28 @@
-<!-- /company-details.html -->
+<!-- /company-details.html — English; Greek: company-details-gr.html -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Company Details | Comfort Ventures</title>
-    <meta name="description" content="Company details and (optional) shareholding structure." />
+    <meta
+      name="description"
+      content="Corporate registry and contact disclosure for COMFORT VENTURES I.K.E., as published on comfortventures.gr."
+    />
     <style>
+      :root {
+        --text: #1f2937;
+        --muted: #6b7280;
+        --primary: #1d4ed8;
+        --primary-dark: #153eaa;
+        --border: #e5e7eb;
+        --max-width: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         margin: 0;
         font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
@@ -14,67 +30,263 @@
         color: #111;
         background: #fff;
       }
+
       main {
         width: min(900px, calc(100% - 40px));
         margin: 0 auto;
         padding: 28px 0 60px;
       }
-      a { color: inherit; }
-      .muted { color: #555; }
-      h1 { margin: 0 0 10px; }
+
+      main a {
+        color: #1d4ed8;
+      }
+
+      .container {
+        width: min(92%, var(--max-width));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.96);
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(10px);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 74px;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--text);
+        letter-spacing: 0.2px;
+        text-decoration: none;
+      }
+
+      .logo span {
+        color: var(--primary);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .nav-links a {
+        color: var(--text);
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      .lang-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: white !important;
+        background: var(--primary);
+        padding: 8px 14px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.2s ease;
+        white-space: nowrap;
+      }
+
+      .lang-btn:hover {
+        background: var(--primary-dark);
+        color: white !important;
+      }
+
+      .nav-cta {
+        background: var(--primary);
+        color: white !important;
+        padding: 11px 18px;
+        border-radius: 10px;
+        font-weight: 600;
+        transition: background 0.2s ease;
+      }
+
+      .nav-cta:hover {
+        background: var(--primary-dark);
+        color: white !important;
+      }
+
+      .nav-current {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.6rem;
+        cursor: pointer;
+        color: var(--text);
+      }
+
+      .muted {
+        color: #555;
+      }
+      h1 {
+        margin: 0 0 10px;
+      }
+      h2 {
+        font-size: 1.15rem;
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #e5e7eb;
+      }
       dl {
         display: grid;
         grid-template-columns: 260px 1fr;
         gap: 10px 16px;
         margin: 18px 0 0;
       }
-      dt { font-weight: 800; }
-      dd { margin: 0; }
-      ul { margin: 8px 0 0 18px; }
-      .note {
-        margin-top: 18px;
+      dt {
+        font-weight: 800;
+      }
+      dd {
+        margin: 0;
+      }
+      ul {
+        margin: 8px 0 0 18px;
+      }
+      .partner {
+        margin: 0 0 20px;
+        padding: 14px 16px;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        background: #fafafa;
+      }
+      .partner:last-child {
+        margin-bottom: 0;
+      }
+      .partner p {
+        margin: 0 0 8px;
+      }
+      .partner p:last-child {
+        margin-bottom: 0;
+      }
+      .source-note {
+        margin-top: 24px;
         padding: 12px 14px;
         border: 1px solid #ddd;
         border-radius: 12px;
         background: #fafafa;
+        font-size: 0.95rem;
       }
+
+      @media (max-width: 760px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .nav-links {
+          position: absolute;
+          top: 75px;
+          left: 0;
+          right: 0;
+          background: white;
+          border-bottom: 1px solid var(--border);
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 18px 20px 24px;
+          gap: 16px;
+          display: none;
+        }
+
+        .nav-links.show {
+          display: flex;
+        }
+
+        .nav-cta {
+          width: 100%;
+          text-align: center;
+        }
+
+        .lang-btn {
+          width: 100%;
+        }
+      }
+
       @media (max-width: 720px) {
-        dl { grid-template-columns: 1fr; }
+        dl {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
 
   <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="home.html#home" class="logo">Comfort<span>Ventures</span></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+          ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+          <a class="lang-btn" href="company-details-gr.html" hreflang="el" lang="el" title="Ελληνικά">GR</a>
+          <a href="home.html#about">About</a>
+          <a href="home.html#focus">Services</a>
+          <a href="home.html#team">Team</a>
+          <span class="nav-current" aria-current="page">Company details</span>
+          <a href="home.html#contact" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
     <main>
-      <p class="muted"><a href="/">← Back to Home</a></p>
       <h1>Company Details</h1>
       <p class="muted">
-        Recommended: keep this page company-level only (no personal AFM, no home addresses).
+        Information below matches the corporate disclosure published at
+        <a href="https://comfortventures.gr/" rel="noopener noreferrer">comfortventures.gr</a>.
       </p>
 
       <dl>
-        <dt>Company Name</dt>
+        <dt>Distinctive title</dt>
+        <dd>—</dd>
+
+        <dt>Company name</dt>
         <dd>COMFORT VENTURES I.K.E.</dd>
 
-        <dt>Headquarters Address</dt>
+        <dt>Headquarters address</dt>
         <dd>KERAMEIKOU 2, 20007, ANCIENT CORINTH, GREECE</dd>
 
         <dt>VAT (AFM)</dt>
         <dd>802676593</dd>
 
-        <dt>Tax Office (DOY)</dt>
+        <dt>Tax office (DOY)</dt>
         <dd>KORINTHOU</dd>
 
-        <dt>GEMI Number</dt>
+        <dt>GEMI number</dt>
         <dd>180732337000</dd>
 
-        <dt>GEMI Authority</dt>
-        <dd>CHAMBER OF KORINTHIA</dd>
+        <dt>Competent GEMI service</dt>
+        <dd>CHAMBER OF KORINTHIA (Επιμελητήριο Κορινθίας)</dd>
 
         <dt>Activities (KAD)</dt>
         <dd>
           <ul>
-            <li>41202001 (main)</li>
+            <li>41202001 (main activity)</li>
             <li>68101300</li>
             <li>55201106</li>
             <li>55201000</li>
@@ -82,27 +294,97 @@
         </dd>
 
         <dt>Phone</dt>
-        <dd><a href="tel:+306976133250">(+30) 697 613 3250</a></dd>
+        <dd id="company-details-phone"></dd>
 
         <dt>Email</dt>
-        <dd><a href="mailto:info@comfortventures.gr">info@comfortventures.gr</a></dd>
+        <dd id="company-details-email"></dd>
 
-        <dt>Company Capital</dt>
+        <dt>Share capital</dt>
         <dd>160,000 €</dd>
 
-        <dt>Incorporation Date</dt>
+        <dt>Date of incorporation</dt>
         <dd>27/11/2024</dd>
-      </dl>
 
-      <div class="note">
-        <strong>Shareholding Structure (optional)</strong><br />
-        If you add this, publish only percentages (no personal tax IDs, no private addresses).
-        <ul>
-          <li>Shareholder A — 45%</li>
-          <li>Shareholder B — 10%</li>
-          <li>Shareholder C — 45%</li>
-        </ul>
+        <dt>End of first financial period</dt>
+        <dd>31/12/2024</dd>
+
+        <dt>Managers</dt>
+        <dd>Marinos Agapiou (Μαρίνος Αγαπίου)</dd>
+      </dl>
+      <noscript>
+        <p class="muted" style="margin-top: 10px">
+          Please enable JavaScript to view phone and email.
+        </p>
+      </noscript>
+
+      <h2>Partners</h2>
+      <div class="partner">
+        <p><strong>Stylianos Agapiou</strong> (ΣΤΥΛΙΑΝΟΣ ΑΓΑΠΙΟΥ)</p>
+        <p class="muted">Father’s name: Georgios (Γεώργιος)</p>
+        <p><strong>AFM:</strong> 157657141</p>
+        <p>
+          <strong>Address:</strong> MAVROGENOUS 2A, GERAKAS, ATTIKI, postal code 15344
+        </p>
+        <p><strong>Contribution category:</strong> Capital (Κεφαλαιακές)</p>
+        <p><strong>Participation:</strong> 45%</p>
       </div>
+      <div class="partner">
+        <p><strong>Georgios Agapiou</strong> (ΓΕΩΡΓΙΟΣ ΑΓΑΠΙΟΥ)</p>
+        <p class="muted">Father’s name: Stylianos (Στυλιανός)</p>
+        <p><strong>AFM:</strong> 044782250</p>
+        <p>
+          <strong>Address:</strong> MAVROGENOUS 2A, GERAKAS, ATTIKI, postal code 15344
+        </p>
+        <p><strong>Contribution category:</strong> Capital (Κεφαλαιακές)</p>
+        <p><strong>Participation:</strong> 10%</p>
+      </div>
+      <div class="partner">
+        <p><strong>Marinos Agapiou</strong> (ΜΑΡΙΝΟΣ ΑΓΑΠΙΟΥ)</p>
+        <p class="muted">Father’s name: Georgios (Γεώργιος)</p>
+        <p><strong>AFM:</strong> 163437646</p>
+        <p>
+          <strong>Address:</strong> MAVROGENOUS 2A, GERAKAS, ATTIKI, postal code 15344
+        </p>
+        <p><strong>Contribution category:</strong> Capital (Κεφαλαιακές)</p>
+        <p><strong>Participation:</strong> 45%</p>
+      </div>
+
+      <p class="source-note muted">
+        Source: corporate website disclosure ·
+        <a href="https://comfortventures.gr/" rel="noopener noreferrer">https://comfortventures.gr/</a>
+      </p>
     </main>
+
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("show");
+      });
+
+      document.querySelectorAll(".nav-links a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          navLinks.classList.remove("show");
+        });
+      });
+
+      (function () {
+        const phoneEl = document.getElementById("company-details-phone");
+        const emailEl = document.getElementById("company-details-email");
+        if (!phoneEl || !emailEl) return;
+
+        const user = "minosagap";
+        const domain = "gmail.com";
+        const phoneParts = ["+30", "697", "613", "3250"];
+
+        const email = `${user}@${domain}`;
+        const phone = phoneParts.join("");
+        const phoneDisplay = `(${phoneParts[0]}) ${phoneParts[1]} ${phoneParts[2]} ${phoneParts[3]}`;
+
+        phoneEl.innerHTML = `<a href="tel:${phone}">${phoneDisplay}</a>`;
+        emailEl.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+      })();
+    </script>
   </body>
 </html>

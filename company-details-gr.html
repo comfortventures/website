@@ -1,0 +1,386 @@
+<!-- /company-details-gr.html -->
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Στοιχεία εταιρείας | Comfort Ventures</title>
+    <meta
+      name="description"
+      content="Εταιρικά και επικοινωνιακά στοιχεία της COMFORT VENTURES I.K.E., όπως δημοσιεύονται στο comfortventures.gr."
+    />
+    <style>
+      :root {
+        --text: #1f2937;
+        --muted: #6b7280;
+        --primary: #1d4ed8;
+        --primary-dark: #153eaa;
+        --border: #e5e7eb;
+        --max-width: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+        line-height: 1.6;
+        color: #111;
+        background: #fff;
+      }
+
+      main {
+        width: min(900px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 28px 0 60px;
+      }
+
+      main a {
+        color: #1d4ed8;
+      }
+
+      .container {
+        width: min(92%, var(--max-width));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.96);
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(10px);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 74px;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--text);
+        letter-spacing: 0.2px;
+        text-decoration: none;
+      }
+
+      .logo span {
+        color: var(--primary);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .nav-links a {
+        color: var(--text);
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      .lang-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: white !important;
+        background: var(--primary);
+        padding: 8px 14px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.2s ease;
+        white-space: nowrap;
+      }
+
+      .lang-btn:hover {
+        background: var(--primary-dark);
+        color: white !important;
+      }
+
+      .nav-cta {
+        background: var(--primary);
+        color: white !important;
+        padding: 11px 18px;
+        border-radius: 10px;
+        font-weight: 600;
+        transition: background 0.2s ease;
+      }
+
+      .nav-cta:hover {
+        background: var(--primary-dark);
+        color: white !important;
+      }
+
+      .nav-current {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.6rem;
+        cursor: pointer;
+        color: var(--text);
+      }
+
+      .muted {
+        color: #555;
+      }
+      h1 {
+        margin: 0 0 10px;
+      }
+      h2 {
+        font-size: 1.15rem;
+        margin: 32px 0 12px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+      dl {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 10px 16px;
+        margin: 18px 0 0;
+      }
+      dt {
+        font-weight: 800;
+      }
+      dd {
+        margin: 0;
+      }
+      ul {
+        margin: 8px 0 0 18px;
+      }
+      .partner {
+        margin: 0 0 20px;
+        padding: 14px 16px;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        background: #fafafa;
+      }
+      .partner:last-child {
+        margin-bottom: 0;
+      }
+      .partner p {
+        margin: 0 0 8px;
+      }
+      .partner p:last-child {
+        margin-bottom: 0;
+      }
+      .source-note {
+        margin-top: 24px;
+        padding: 12px 14px;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        background: #fafafa;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 760px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .nav-links {
+          position: absolute;
+          top: 75px;
+          left: 0;
+          right: 0;
+          background: white;
+          border-bottom: 1px solid var(--border);
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 18px 20px 24px;
+          gap: 16px;
+          display: none;
+        }
+
+        .nav-links.show {
+          display: flex;
+        }
+
+        .nav-cta {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 720px) {
+        dl {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="home-gr.html#home" class="logo">Comfort<span>Ventures</span></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Άνοιγμα μενού">
+          ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+          <a class="lang-btn" href="company-details.html" hreflang="en" lang="en" title="English">EN</a>
+          <a href="home-gr.html#about">Σχετικά</a>
+          <a href="home-gr.html#focus">Υπηρεσίες</a>
+          <a href="home-gr.html#team">Ομάδα</a>
+          <span class="nav-current" aria-current="page">Στοιχεία εταιρείας</span>
+          <a href="home-gr.html#contact" class="nav-cta">Επικοινωνία</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1>Στοιχεία εταιρείας</h1>
+      <p class="muted">
+        Τα παρακάτω στοιχεία αντιστοιχούν στη δημοσιευμένη εταιρική γνωστοποίηση στο
+        <a href="https://comfortventures.gr/" rel="noopener noreferrer">comfortventures.gr</a>.
+      </p>
+
+      <dl>
+        <dt>Διακριτικός τίτλος</dt>
+        <dd>—</dd>
+
+        <dt>Επωνυμία εταιρείας</dt>
+        <dd>COMFORT VENTURES I.K.E.</dd>
+
+        <dt>Διεύθυνση έδρας</dt>
+        <dd>ΚΕΡΑΜΕΙΚΟΥ 2, 20007, ΑΡΧΑΙΑ ΚΟΡΙΝΘΟΣ</dd>
+
+        <dt>ΑΦΜ</dt>
+        <dd>802676593</dd>
+
+        <dt>ΔΟΥ</dt>
+        <dd>ΚΟΡΙΝΘΟΥ</dd>
+
+        <dt>Αριθμός ΓΕΜΗ</dt>
+        <dd>180732337000</dd>
+
+        <dt>Αρμόδια υπηρεσία ΓΕΜΗ</dt>
+        <dd>ΕΠΙΜΕΛΗΤΗΡΙΟ ΚΟΡΙΝΘΙΑΣ</dd>
+
+        <dt>Δραστηριότητες (ΚΑΔ)</dt>
+        <dd>
+          <ul>
+            <li>41202001 (κύρια δραστηριότητα)</li>
+            <li>68101300</li>
+            <li>55201106</li>
+            <li>55201000</li>
+          </ul>
+        </dd>
+
+        <dt>Τηλέφωνο επικοινωνίας</dt>
+        <dd id="company-details-phone"></dd>
+
+        <dt>Email</dt>
+        <dd id="company-details-email"></dd>
+
+        <dt>Εταιρικό κεφάλαιο</dt>
+        <dd>160.000 €</dd>
+
+        <dt>Ημερομηνία σύστασης</dt>
+        <dd>27/11/2024</dd>
+
+        <dt>Λήξη 1ης διαχειριστικής περιόδου</dt>
+        <dd>31/12/2024</dd>
+
+        <dt>Διαχειριστές</dt>
+        <dd>Μαρίνος Αγαπίου</dd>
+      </dl>
+      <noscript>
+        <p class="muted" style="margin-top: 10px">
+          Ενεργοποιήστε την JavaScript για να εμφανιστούν τηλέφωνο και email.
+        </p>
+      </noscript>
+
+      <h2>Εταίροι</h2>
+      <div class="partner">
+        <p><strong>ΣΤΥΛΙΑΝΟΣ ΑΓΑΠΙΟΥ</strong> (Stylianos Agapiou)</p>
+        <p class="muted">Όνομα πατρός: Γεώργιος</p>
+        <p><strong>ΑΦΜ:</strong> 157657141</p>
+        <p>
+          <strong>Διεύθυνση:</strong> ΜΑΥΡΟΓΕΝΟΥΣ 2Α, ΓΕΡΑΚΑΣ ΑΤΤΙΚΗΣ, Τ.Κ. 15344
+        </p>
+        <p><strong>Κατηγορία εισφορών:</strong> Κεφαλαιακές</p>
+        <p><strong>Ποσοστό συμμετοχής:</strong> 45%</p>
+      </div>
+      <div class="partner">
+        <p><strong>ΓΕΩΡΓΙΟΣ ΑΓΑΠΙΟΥ</strong> (Georgios Agapiou)</p>
+        <p class="muted">Όνομα πατρός: Στυλιανός</p>
+        <p><strong>ΑΦΜ:</strong> 044782250</p>
+        <p>
+          <strong>Διεύθυνση:</strong> ΜΑΥΡΟΓΕΝΟΥΣ 2Α, ΓΕΡΑΚΑΣ ΑΤΤΙΚΗΣ, Τ.Κ. 15344
+        </p>
+        <p><strong>Κατηγορία εισφορών:</strong> Κεφαλαιακές</p>
+        <p><strong>Ποσοστό συμμετοχής:</strong> 10%</p>
+      </div>
+      <div class="partner">
+        <p><strong>ΜΑΡΙΝΟΣ ΑΓΑΠΙΟΥ</strong> (Marinos Agapiou)</p>
+        <p class="muted">Όνομα πατρός: Γεώργιος</p>
+        <p><strong>ΑΦΜ:</strong> 163437646</p>
+        <p>
+          <strong>Διεύθυνση:</strong> ΜΑΥΡΟΓΕΝΟΥΣ 2Α, ΓΕΡΑΚΑΣ ΑΤΤΙΚΗΣ, Τ.Κ. 15344
+        </p>
+        <p><strong>Κατηγορία εισφορών:</strong> Κεφαλαιακές</p>
+        <p><strong>Ποσοστό συμμετοχής:</strong> 45%</p>
+      </div>
+
+      <p class="source-note muted">
+        Πηγή: εταιρική ιστοσελίδα ·
+        <a href="https://comfortventures.gr/" rel="noopener noreferrer">https://comfortventures.gr/</a>
+      </p>
+    </main>
+
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("show");
+      });
+
+      document.querySelectorAll(".nav-links a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          navLinks.classList.remove("show");
+        });
+      });
+
+      (function () {
+        const phoneEl = document.getElementById("company-details-phone");
+        const emailEl = document.getElementById("company-details-email");
+        if (!phoneEl || !emailEl) return;
+
+        const user = "minosagap";
+        const domain = "gmail.com";
+        const phoneParts = ["+30", "697", "613", "3250"];
+
+        const email = `${user}@${domain}`;
+        const phone = phoneParts.join("");
+        const phoneDisplay = `(${phoneParts[0]}) ${phoneParts[1]} ${phoneParts[2]} ${phoneParts[3]}`;
+
+        phoneEl.innerHTML = `<a href="tel:${phone}">${phoneDisplay}</a>`;
+        emailEl.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+      })();
+    </script>
+  </body>
+</html>
